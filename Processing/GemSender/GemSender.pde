@@ -47,17 +47,19 @@ void setupGUI() {
         ;
   serialddl.setItemHeight(20);
   serialddl.setBarHeight(15);
-  serialddl.captionLabel().set("SELECT ARDUINO SERIAL PORT");
-  serialddl.captionLabel().style().marginTop = 3;
-  serialddl.captionLabel().style().marginLeft = 3;
-  serialddl.valueLabel().style().marginTop = 3;
+  serialddl.getCaptionLabel().set("SELECT ARDUINO SERIAL PORT");
+  serialddl.getCaptionLabel().getStyle().marginTop = 3;
+  serialddl.getCaptionLabel().getStyle().marginLeft = 3;
+  serialddl.getValueLabel().getStyle().marginTop = 3;
   //set the serial options
   String SerialList[] = Serial.list(); 
   for (int i=0;i<SerialList.length;i++) {
     String portName = SerialList[i];
     serialddl.addItem(portName, i);
   }
-  serialddl.setIndex(1);
+  
+  // todo
+//  serialddl.setIndex(1);
 
   //setup the baud list
   baudddl = cp5.addDropdownList("BaudRate")
@@ -66,16 +68,18 @@ void setupGUI() {
         ;
   baudddl.setItemHeight(20);
   baudddl.setBarHeight(15);
-  baudddl.captionLabel().set("SELECT THE BAUD RATE");
-  baudddl.captionLabel().style().marginTop = 3;
-  baudddl.captionLabel().style().marginLeft = 3;
-  baudddl.valueLabel().style().marginTop = 3;
+  baudddl.getCaptionLabel().set("SELECT THE BAUD RATE");
+  baudddl.getCaptionLabel().getStyle().marginTop = 3;
+  baudddl.getCaptionLabel().getStyle().marginLeft = 3;
+  baudddl.getValueLabel().getStyle().marginTop = 3;
   //the baud options
   for (int i=0;i<serialRateStrings.length;i++) {
     String baudString = serialRateStrings[i];
     baudddl.addItem(baudString, i);
   }
-  baudddl.setIndex(4);
+  
+  // todo
+  //baudddl.setIndex(4);
 
   //udp IP/port
   ipAddressField = cp5.addTextfield("IP address")
@@ -214,7 +218,7 @@ String[] serialRateStrings = {
   "19200", "28800", "38400", "57600", "115200"
 };
 int baud = 9600;
-int serialListNumber = 8;
+int serialListNumber = 0;
 
 ArrayList<Byte> serialBuffer = new ArrayList<Byte>();
 
@@ -392,4 +396,3 @@ void drawIncomingSerial() {
 void drawIncomingUDP() {
   lastUDPPacket = millis();
 }
-

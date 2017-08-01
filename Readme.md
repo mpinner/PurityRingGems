@@ -19,6 +19,7 @@ OSC from Ableton (or anywhere) can be sent to our USB Gem Controller via a small
 * Java : https://www.java.com/en/download/ - this will require an internet connection* Serial Drivers : https://www.pjrc.com/teensy/serial_install.exe* GemSender :  * unzip and find the application for your operating system  * it would be best to right click the application and create a shortcut to place where you choose. - when launched this application will start with our preconfigured settings  - when incoming data is received the UDP box will flash white.
 
 * Firewall Rules (windows only) :  - if the white box is not flashing and you've double checked your connection parameters, you might need to alter your firewall.  - Within the Control Panel -> Firewall -> Disable Firewall for Local/Private Networks  - Explanation : The GemSender is attempting to open a local port to listen for incoming OSC. the default windows firewall rules will prevent any application from acting in a server this way.
+ * UDP : http://ubaa.net/shared/processing/udp/
 
  
 ## Arduino
