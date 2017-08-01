@@ -27,17 +27,17 @@ OSC from Ableton (or anywhere) can be sent to our USB Gem Controller via a small
 
  
   * **Gems_HitSync** : latest Usb Gem Controller code to controll all 8 gems
-  * **lightingTEsts** : used to test gem leds, power, and connections
+  * **lightingTests** : used to test gem leds, power, and connections
   * **PurityRingSystemDataFlows.jpg** : new multi-machine diagram
   
 ###Dependencies
 
 * latest Arduino
-* Teensduino
-* Teensy 3.1
-* OctoWs2811Adapter and OctoWS2811.h
-* Open Sound Control : OSCBundle /SLIPEncodedUSBSerial.h
-* LucidTronix HSB RGB Color Library : Color.h
+* [Teensduino](https://www.pjrc.com/teensy/td_download.html)
+* Teensy 3.1 / 3.2
+* OctoWs2811Adapter and [OctoWS2811.h](https://www.pjrc.com/teensy/td_libs_OctoWS2811.html)
+* Open Sound Control : [OSCBundle / SLIPEncodedUSBSerial.h](https://github.com/CNMAT/OSC)
+* LucidTronix HSB RGB Color Library : [Color.h](http://www.lucidtronix.com/tutorials/19 )
 
   
 ## TouchOsc
