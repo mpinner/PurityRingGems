@@ -58,8 +58,7 @@ void setupGUI() {
     serialddl.addItem(portName, i);
   }
   
-  // todo
-//  serialddl.setIndex(1);
+  serialddl.setValue(1);
 
   //setup the baud list
   baudddl = cp5.addDropdownList("BaudRate")
@@ -78,8 +77,7 @@ void setupGUI() {
     baudddl.addItem(baudString, i);
   }
   
-  // todo
-  //baudddl.setIndex(4);
+  baudddl.setValue(4);
 
   //udp IP/port
   ipAddressField = cp5.addTextfield("IP address")
@@ -218,7 +216,7 @@ String[] serialRateStrings = {
   "19200", "28800", "38400", "57600", "115200"
 };
 int baud = 9600;
-int serialListNumber = 0;
+int serialListNumber = 3;
 
 ArrayList<Byte> serialBuffer = new ArrayList<Byte>();
 

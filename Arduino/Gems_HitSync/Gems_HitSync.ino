@@ -115,7 +115,7 @@ void setup() {
 
 
   // setup OSC listener
-  SLIPSerial.begin(11520);   // set this as high as you can reliably run on your platform
+  SLIPSerial.begin(9600);   // set this as high as you can reliably run on your platform
 
   // fps calculation
   loopElapsed = millis();
